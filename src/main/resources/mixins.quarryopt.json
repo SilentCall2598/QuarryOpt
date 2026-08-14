@@ -1,0 +1,17 @@
+{
+	"package": "quarryopt.mixin",
+	"plugin": "quarryopt.QuarryOptMixinPlugin",
+	"required": false,
+	"refmap": "${mixin_refmap}",
+	"target": "@env(DEFAULT)",
+	"minVersion": "0.8.5",
+	"compatibilityLevel": "JAVA_8",
+	"mixins": [
+		"MixinChunkResetRadius",
+		"MixinFilterGhostStackCache",
+		"MixinItemCaptureHandler",
+		"MixinXPCaptureHandler"
+	],
+	"server": [],
+	"client": []
+}

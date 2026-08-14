@@ -1,0 +1,7 @@
+Copy extrautils2-1.12-1.9.9.jar from your modpack's mods folder into this folder.
+
+Prism Launcher -> right-click your DJ2 instance -> Folder -> .minecraft -> mods
+Look for a file starting with "extrautils2".
+
+Copy it here (do not move it - leave the original where it is).
+The build needs it to compile against; it is NOT bundled into your mod.
