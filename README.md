@@ -58,11 +58,11 @@ be turned off independently, which makes it easy to rule this mod in or out whil
 ## Compatibility
 
 Captured quarry drops no longer fire `EntityJoinWorldEvent`, because no item entity is
-created. Drop-modifying effects are unaffected — Fortune, ore doubling and auto-smelt all
-run earlier, on `BlockEvent.HarvestDropsEvent`, and behave identically.
+created. Drop-modifying effects are unaffected, Fortune, auto-smelt, all run earlier, 
+on `BlockEvent.HarvestDropsEvent`, and behave identically.
 
 Every optimization falls back to stock Extra Utilities 2 behaviour if it can't apply cleanly.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT: see [LICENSE](LICENSE).
