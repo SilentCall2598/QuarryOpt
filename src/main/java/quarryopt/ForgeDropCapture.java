@@ -113,7 +113,7 @@ public final class ForgeDropCapture {
                     + "is XPCaptureHandler.startCapturing throwing outside XU2's try block, but "
                     + "any escape between start and stop does this. Released: Forge capture ({} "
                     + "stack(s) discarded), XU2 item capture ({} stack(s) discarded), XU2 XP "
-                    + "capture ({} xp discarded - zero means XP capture was not stranded). Left "
+                    + "capture ({} xp discarded, zero means XP capture was not stranded). Left "
                     + "alone, stranded capture keeps swallowing item drops on this thread, and XP "
                     + "orbs too when XP capture was part of it, until restart.",
                     lost, xuLost, xpLost);
