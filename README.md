@@ -8,6 +8,7 @@ same energy use. Clients don't need it if installed on a server.
 ## What it does
 
 | Optimization | What changes |
+|---|---|
 | **Filter cache** | Filter contents are read once and reused, instead of being rebuilt from NBT on every single item check |
 | **Drop capture** | Quarry drops go straight into Extra Utilities 2's list through Forge's own capture mechanism, instead of becoming item entities that are created and immediately deleted |
 | **Chunk reset** | Chunk cleanup on quarry chunk swap covers the 3×3 area that can actually have been modified, instead of a 5×5 |
@@ -18,6 +19,7 @@ Two 5-minute Spark profiles, same server, same session, matched conditions. The 
 variable was the config toggle. Figures are share of total server-thread time.
 
 | Metric | Off | On | Change |
+|---|---:|---:|---:|
 | `TileQuarry.update` | 6.50% | 3.90% | **−40%** |
 | `ItemFilterItems.matches` | 2.13% | 0.82% | −62% |
 | `StackHelper.loadFromNBT` | 1.35% | 0.00% | −100% |
@@ -47,6 +49,7 @@ Clients do not need this mod if used on a server.
 be turned off independently, which makes it easy to rule this mod in or out while troubleshooting.
 
 | Option | Default | Description |
+|---|---:|---|
 | `filterCache` | `true` | Cache filter contents |
 | `filterFullCache` | `true` | Cache whole filters at once rather than slot by slot |
 | `dropCapture` | `true` | Route quarry drops through Forge's capture mechanism |
