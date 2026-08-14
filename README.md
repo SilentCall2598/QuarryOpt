@@ -5,6 +5,8 @@ Server-side performance patch for Extra Utilities 2 Quantum Quarries.
 Cuts quarry cost on the server thread by roughly **40%**, same mining speed, same yield,
 same energy use. Clients don't need it if installed on a server.
 
+**Minecraft 1.12.2 · Forge 14.23.5.2860 · Extra Utilities 2 1.9.9 · MixinBooter 10.7**
+
 ## What it does
 
 | Optimization | What changes |
@@ -31,6 +33,10 @@ area-mining enchantment. A setup with plain, unfiltered quarries has far less ov
 remove and will see a smaller improvement.
 
 Chunk reset, measured on a separate 32-quarry stress test: **`releaseChunk` 8.41% → 3.07% (−64%)**.
+
+<sub>`ItemFilterItems.matches` and `EntityItem.<init>` recurse, so the table reports
+top-level totals only. Spark's aggregate method view sums nested calls and reads higher
+for those two rows.</sub>
 
 ## Requirements
 
