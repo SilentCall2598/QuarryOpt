@@ -40,7 +40,7 @@ for those two rows.</sub>
 
 ## Requirements
 
-- Extra Utilities 2, a hard dependency, the mod will not load without it
+- [Extra Utilities](https://www.curseforge.com/minecraft/mc-mods/extra-utilities), a hard dependency, the mod will not load without it
 - [MixinBooter](https://www.curseforge.com/minecraft/mc-mods/mixin-booter) 10.7 or compatible
 
 ## Installation
@@ -59,7 +59,7 @@ be turned off independently, which makes it easy to rule this mod in or out whil
 | `filterCache` | `true` | Cache filter contents |
 | `filterFullCache` | `true` | Cache whole filters at once rather than slot by slot |
 | `dropCapture` | `true` | Route quarry drops through Forge's capture mechanism |
-| `chunkResetRadius` | `1` | `1` = 3×3 cleanup, `2` = 5×5 (stock behaviour) |
+| `chunkResetRadius` | `1` | `1` = 3×3 cleanup, `2` = 5×5 (Original behavior) |
 
 ## Compatibility
 
@@ -68,6 +68,8 @@ created. Drop-modifying effects are unaffected, Fortune, auto-smelt, all run ear
 on `BlockEvent.HarvestDropsEvent`, and behave identically.
 
 Every optimization falls back to stock Extra Utilities 2 behaviour if it can't apply cleanly.
+
+This mod was originally made for the Divine Journey 2 modpack, compatibility with other modpacks hasn't been tested at the time of writing this.
 
 ## License
 
