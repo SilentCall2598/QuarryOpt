@@ -5,7 +5,7 @@ Server-side performance patch for Extra Utilities 2 Quantum Quarries.
 Cuts quarry cost on the server thread by roughly **40%**, same mining speed, same yield,
 same energy use. Clients don't need it if installed on a server.
 
-**Minecraft 1.12.2 · Forge 14.23.5.2860 · Extra Utilities 2 1.9.9 · MixinBooter 10.7**
+**Minecraft 1.12.2 · Tested on Forge 14.23.5.2860 · Extra Utilities 2 1.9.9 · MixinBooter 10.7**
 
 ## What it does
 
