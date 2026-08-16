@@ -108,22 +108,15 @@ public final class ForgeDropCapture {
 
         leaks++;
         if (leaks <= 3) {
-            QuarryOpt.LOGGER.error("Item capture was still active at end of server tick. Extra "
-                    + "Utilities 2 started a capture and never stopped it. One known failure path "
-                    + "is XPCaptureHandler.startCapturing throwing outside XU2's try block, but "
-                    + "any escape between start and stop does this. Released: Forge capture ({} "
-                    + "stack(s) discarded), XU2 item capture ({} stack(s) discarded), XU2 XP "
-                    + "capture ({} xp discarded, zero means XP capture was not stranded). Left "
-                    + "alone, stranded capture keeps swallowing item drops on this thread, and XP "
-                    + "orbs too when XP capture was part of it, until restart.",
+            QuarryOpt.LOGGER.error("Detected stranded XU2 item capture at end of tick. "
+                    + "Cleaned up Forge={} stack(s), XU2={} stack(s), XP={}. "
+                    + "Leak count: {}/{}."
                     lost, xuLost, xpLost);
         }
         if (leaks == LEAK_LIMIT) {
-            QuarryOpt.LOGGER.error("That has now happened {} times, which means something is "
-                    + "repeatedly putting Extra Utilities 2's capture system into an invalid "
-                    + "state. Quarry Opt will stop the Forge capture for the rest of this "
-                    + "session and will no longer clean up after it."
-                    + "please restart and investigate.", LEAK_LIMIT);
+            QuarryOpt.LOGGER.error("Stranded item capture detected {} times. "
+                    + "Disabling Quarry Opt drop capture until server restart.",
+                    LEAK_LIMIT);
         }
     }
 
